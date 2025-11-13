@@ -1,0 +1,16 @@
+name: Build Windows
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - PRE_PRODUCCION
+      - PRODUCCION
+
+jobs:
+  build-windows:
+    uses: RiojaDevs/GameCI_Devops/.github/workflows/build-windows.yml@DESARROLLO
+    with:
+      unityVersion: 6000.2.10f1
+      sendToDiscord: true
+    secrets: inherit

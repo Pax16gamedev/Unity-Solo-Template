@@ -1,0 +1,18 @@
+name: Build WebGL
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - PRE_PRODUCCION
+      - PRODUCCION
+
+jobs:
+  build-webgl:
+    uses: RiojaDevs/GameCI_Devops/.github/workflows/build-webgl.yml@DESARROLLO
+    secrets: inherit
+    with:
+      sendToDiscord: true
+      publishToItch: true
+      itchioChannel: "pax16/test-devops:webgl"
+

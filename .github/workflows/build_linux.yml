@@ -1,0 +1,12 @@
+name: Build Linux
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    uses: RiojaDevs/GameCI_Devops/.github/workflows/build-linux.yml@DESARROLLO
+    with:
+      unityVersion: 6000.2.10f1
+      sendToDiscord: true
+    secrets: inherit
